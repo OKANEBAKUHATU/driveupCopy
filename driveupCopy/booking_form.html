@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>予約フォーム</title>
+</head>
+<body>
+    <h1>予約フォーム</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">予約する</button>
+    </form>
+</body>
+</html>
