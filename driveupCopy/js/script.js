@@ -67,9 +67,9 @@ document.querySelectorAll(".faq-question").forEach(item => {
   });
 });
 
-function areaPage() {
-  window.location.href = '.html';
-}
+// function areaPage() {
+//   window.location.href = '.html';
+// }
 
 // お客様の声
 let index = 0;
@@ -168,3 +168,27 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+
+
+
+// 料金ページ
+function openLesson() {
+  document.getElementById("lesson").style.display = "flex";
+}
+function closeLesson() {
+  document.getElementById("lesson").style.display = "none";
+}
+
+// function toggleContent(id) {
+//   var areas = document.getElementById(id);
+//   areas.style.display = areas.style.display === "none" ? "block" : "none";
+// }
+function toggleContent(id) {
+  const areas = document.getElementById(id);
+  if (!areas) {
+    console.error("要素が見つかりません: " + id);
+    return;
+  }
+  areas.style.display = areas.style.display === "none" ? "block" : "none";
+}
