@@ -1,3 +1,6 @@
+body {
+  padding: 65px 0 60px 0;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -103,10 +106,6 @@ li {
 .menu-btn.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
 }
-main {
-  padding-top: 60px;
-}
-
 /* スライドショー---------------------------------------------------------- */
 .slideshow {
   position: relative;
@@ -155,7 +154,7 @@ main {
   margin-right: auto;   /* 中央寄せ */
   /* padding-left: 16px;   左右に余白 */
   /* padding-right: 16px; */
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -193,10 +192,24 @@ main {
   background: #ff4500;
 }
 .sub-title {
+  position: relative;
+  display: block;
   margin: 0 auto;
   font-size: 2rem;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+.sub-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #fe0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
 .image-in-button {
   position: relative;
@@ -640,4 +653,195 @@ th {
   justify-content: center;
   align-items: center;
   width: 20%;
+}
+
+/* そのほかのページ */
+
+
+/* プライバシーポリシー */
+.privacy-policy p li{
+  font-weight: normal;
+}
+.article {
+  padding: 15px 0;
+}
+.article-list2 {
+  list-style-type: decimal;
+}
+
+/* 利用規約 */
+
+.terms-contents {
+  padding: 65px 20px;
+}
+.terms-list {
+  list-style-type: decimal;
+}
+
+/* 料金ページ */
+.price-plan {
+  background: #FCE96A;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.recommend {
+  background: #ff6584;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.plan {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.price {
+  font-size: 2rem;
+  color: #f60;
+  font-weight: bold;
+}
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+}
+.note {
+  font-size: .7rem;
+  color: gray;
+  margin-top: 10px;
+}
+.prit {
+  margin-bottom: 20px;
+}
+.prit table {
+  margin-bottom: -2px;
+}
+.pricing-note{
+  text-align: left;
+  padding-left: 50px;
+}
+.lesson-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.lesson-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.lesson-card ul {
+  padding-left: 15px;
+}
+.lesson-card li {
+  list-style-type: disc;
+  text-align: left;
+}
+.area-header {
+  background-color: #ffeb99;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+.area-header span {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.areas {
+  display: none;
+  padding: 10px;
+}
+.pricing-table {
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: left;
+}
+.pricing-table div {
+  border-bottom: 1px solid black;
+  padding: 5px 0;
+}
+.pricing-table div:last-child {
+  border-bottom: none;
+}
+.areas img {
+  width: 100%;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+/* 法人のお客さまページ */
+
+.copo-course {
+  border: 3px solid black;
+  /* padding: 20px; */
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+}
+.c-price-header {
+  background-color: #fff176;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-bottom: 3px solid black;
+}
+.c-price-text {
+  padding: 20px;
+}
+.c-price-text p {
+  line-height: 1.8;
+  padding-bottom: 15px;
+}
+.c-price-text h4 {
+  padding-bottom: 10px;
+}
+.c-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+.c-price span {
+  font-size: 1.3rem;
+  color: black;
+}
+.note2 {
+  font-size: 1rem;
+}
+.copo-price {
+  font-size: 1.5rem;
+}
+.copo-price a{
+  color: red;
+  font-weight: bold;
+}
+.c-flow {
+  text-align: left;
+}
+.n-title-list {
+  counter-reset: heading-counter;
+}
+.number-title::before{
+  counter-increment: heading-counter;
+  content: counter(heading-counter)". ";
+  font-weight: bold;
+  
 }
