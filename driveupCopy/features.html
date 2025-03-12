@@ -1,5 +1,65 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドライブアップ</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>特徴・こだわり</h1>
 
-{% block content %}
-<h1>特徴</h1>
-{% endblock %}
+<div class="features-commitments">
+    <p>出張型ドライビングスクール ドライブアップを<br>みなさまに安心してご利用いただくためのこだわりをご説明します。</p>
+    <div class="f-commitments">
+        <ul class="n-title-list">
+            <li>
+                <div class="fc-item">
+                    <h3 class="number-title">一人一人を大切に</h3>
+                    <p>
+                        お客様によって運転に対するイメージやお悩みは様々です。<br>
+                        まずはご要望をお聞きし、運転技量の確認をおこない、最適なカリキュラムを提案いたします。<br>
+                        一つずつ不安を解消していき、苦手克服をお手伝いさせていただきます。
+                    </p>
+                    <img src="{% static 'images/image/image4.jpg'%}" alt="画像4">
+                </div>
+            </li>
+            <li>
+                <div class="fc-item">
+                    <h3 class="number-title">指導歴8年の確かな講習</h3>
+                    <p>
+                        国家資格を有する経験豊富な教習指導員が、お客様の目標を達成できるように、『分かりやすく・丁寧』な講習を心がけております。<br>
+                        教習所では伝えきれない内容の講習もおこないますので、有意義な時間になること間違いなしです。
+                        
+                    </p>
+                    <img src="{% static 'images/image/image5.jpg'%}" alt="画像5">
+                </div>
+            </li>
+            <li>
+                <div class="fc-item">
+                    <h3 class="number-title">運転の練習に適した環境づくり</h3>
+                    <p>
+                        当社では、練習がしやすいコンパクトカーを教習車としてご用意、助手席からブレーキをかけることができる補助ブレーキも常備しております。<br>
+                        自動車保険にも加入しておりますので、安心して練習に臨んでいただけます。<br>
+                        ※補助ブレーキは、お客様のマイカーに装着して練習することも可能です。<br>(MT車・左ハンドルの車には装着できません。予めご了承ください。)
+                    </p>
+                    <img src="{% static 'images/image/image6.jpg'%}" alt="画像6">
+                </div>
+            </li>
+            <li>
+                <div class="fc-item">
+                    <h3 class="number-title">出張型ドライビングスクール</h3>
+                    <p>
+                        出張型なので、ご希望の場所まで伺います。自宅付近・職場・送迎場所などの普段お使いになる道路や駐車場で練習することができます。<br>
+                        教習所との大きな違いは、自由度が高いことです。<br>ご自身のペースで、納得がいくまで練習していただけます。
+                    </p>
+                    <img src="{% static 'images/image/image7.jpg'%}" alt="画像7">
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
