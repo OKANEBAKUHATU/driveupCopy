@@ -1,5 +1,214 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドライブアップ</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>法人のお客様向け安全講習</h1>
+<div class="container">
+    <div class="copo-top">
+        <img src="" alt="">
+        <h3>『法人様向け安全講習』</h3>
+        <p>
+            社員のみなさまが業務中、安全な運転ができるように実力を診断し、必要であれば弱点補正を行います。
+            <span class="note">※お申し込みはお電話にてお願いいたします。</span>
+        </p>
+    </div>
+    <h2 class="sub-title">講習案内</h2>
+    <div class="check-look">
+        <h3>基本チェック項目</h3>
+        <p>発進、停止、直進、右左折、進路変更、駐車</p>
+        <h3>応用チェック項目</h3>
+        <p>狭路、山岳、高速道路</p>
+    </div>
+    <p>実力診断では、基本チェック項目の内容を診断させていただきます。</p>
+    <div class="copo-courses">
+        <h3>講習の種類</h3>
 
-{% block content %}
-<h1>法人向けページ</h1>
-{% endblock %}
+        <div class="copo-course">
+            <div class="c-price-header">実力診断コース</div>
+            <div class="c-price-text">
+                <h4>所要時間: 1時限</h4>
+                <p>
+                    運転歴問わず、受講される方の得意な箇所と苦手な箇所の診断のみを行います。
+                    診断結果は、担当者様もしくはご本人様にお伝えいたします。<br>
+                    <span class="note2">※2人以上でのご利用をお願いしております。</span>
+                </p>
+                <div class="copo-price">
+                    <p class="c-price">4,500円<span> (税込)</span></p>
+                    <p class="note2">一人あたりの値段</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copo-course">
+            <div class="c-price-header">実力診断＋基本講習コース</div>
+            <div class="c-price-text">
+                <h4>所要時間: 2時限</h4>
+                <p>
+                    1時限目に、受講される方の得意な箇所と苦手な箇所の診断を行います。<br>
+                    2時限目に、基本チェック項目の苦手な箇所の講習を行います。<br>
+                    診断＋講習結果は、担当者様もしくはご本人様にお伝えいたします。
+                </p>
+                <div class="copo-price">
+                    <p class="c-price">9,000円<span> (税込)</span></p>
+                    <p class="note2">一人あたりの値段</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copo-course">
+            <div class="c-price-header">実力診断＋応用講習コース</div>
+            <div class="c-price-text">
+                <h4>所要時間: 3時限</h4>
+                <p>
+                    1時限目に、受講される方の得意な箇所と苦手な箇所の診断を行います。<br>
+                    2時限目に、基本チェック項目の苦手な箇所の講習を行います。<br>
+                    3時限目に、応用チェック項目の苦手な箇所の講習を行います。<br>
+                    診断＋講習結果は、担当者様もしくはご本人様にお伝えいたします。
+                </p>
+                <div class="copo-price">
+                    <p class="c-price">13,500円<span> (税込)</span></p>
+                    <p class="note2">一人あたりの値段</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copo-course">
+            <div class="c-price-header">運転適性診断コース</div>
+            <div class="c-price-text">
+                <h4>所要時間: 2時限</h4>
+                <p>
+                    業務中に違反や事故を起こしてしまった方が対象のコースです。
+                    違反や事故の内容を細かくお聞きし、起きた理由や対処法、技術面の向上が必要かを診断＋講習を行います。
+                </p>
+                <div class="copo-price">
+                    <p class="c-price">9,000円<span> (税込)</span></p>
+                    <p class="note2">一人あたりの値段</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copo-course">
+            <div class="c-price-header">安全講習コース</div>
+            <div class="c-price-text">
+                <!-- <h4>所要時間: 3時限</h4> -->
+                <p>
+                    他のコースと違い、自由度が高いコースとなっております。<br>
+                    社用車の操作確認、取引先や配達ルートの練習、運転業務の自立など、法人様のご希望内容に添った講習を行います。<br>数日間に渡って講習を行うことも可能です。<br>
+                    詳細ご不明な点はお気軽にお申し付けください。
+                </p>
+                <div class="copo-price">
+                    <p>料金については<a href="/post/pricing/">こちら</a>をご確認下さい。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copo-flow">
+        <h2 class="sub-title">受講までの流れ</h2>
+        <div class="c-flow">
+            <ul class="n-title-list">
+                <li>
+                    <h3 class="number-title">お申込み</h3>
+                    <p>
+                        お問い合わせ・お申し込みはお電話にてお願いいたします。<br>
+                        その際、所在地・担当者様のお名前・ご希望の日時・ご希望のコース・受講予定人数をお伺いいたします。
+                    </p>
+                    <a href="tel:09090902819" class="button">お電話でのお申し込みはこちら</a>
+                </li>
+                <li>
+                    <h3 class="number-title">予約の確定</h3>
+                    <p>
+                        空き状況の確認、日程の調整をさせていただき、予約の確定をいたします。<br>
+                        講習に関する打ち合わせは、基本的にお電話で実施させていただきます。
+                    </p>
+                </li>
+                <li>
+                    <h3 class="number-title">講習実施</h3>
+                    <p>
+                        出張型なので、指導員が所在地へお伺いいたします。<br>
+                        受講される方の運転経歴を簡単にお聞きし、講習を始めていきます。
+                    </p>
+                </li>
+                <li>
+                    <h3 class="number-title">講習終了</h3>
+                    <p>予定の時間になりましたら、その日の運転の振返りをして終了となります。<br>
+                        運転診断結果を担当者様もしくはご本人様にお伝えいたします。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copo-faq">
+        <h2 class="sub-title">よくあるご質問</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 会社の車で講習をしてほしいのですが、可能ですか？
+                    <span class="toggle-btn">＋</span>
+                </button>
+                <div class="faq-answer">
+                    A. はい。可能でございます。<br>
+                    指導員は教習車にて移動しておりますのでマイカー(社用車)をご利用の際は、<br>教習車の駐車スペースの確保をお願いいたします。
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 教習車の使用は可能ですか？
+                    <span class="toggle-btn">＋</span>
+                </button>
+                <div class="faq-answer">
+                    A. はい。可能でございます。<br>
+                    1時限目は教習車、2時限目はマイカー(社用車)で講習を行うことも可能でございます。
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 予約の変更・キャンセルはできますか？
+                    <span class="toggle-btn">＋</span>
+                </button>
+                <div class="faq-answer">
+                    A. はい。可能でございます。<br>
+                    原則として受講前日の18:00までにご連絡いただけましたら、無料で対応させていただいております。<br>
+                    受講前日18:00までにご連絡・・・無料<br>
+                    受講前日18:00以降にご連絡・・・全額請求
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 営業や配達のルートを練習できますか？
+                    <span class="toggle-btn">＋</span>
+                </button>
+                <div class="faq-answer">
+                    A. はい。可能でございます。<br>
+                    しかし、時間に制限がございますので、お選びになられたコースによっては、練習する時間の確保が難しい場合がございます。<br>
+                    ご希望のルート等がある場合は、『安全講習コース』を推奨いたします。
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Q. 2人以上の同時講習は可能ですか？
+                    <span class="toggle-btn">＋</span>
+                </button>
+                <div class="faq-answer">
+                    A. はい。可能でございます。<br>
+                    こちらでご用意する教習車は、最大2名までの同乗講習が可能でございます。<br>
+                    3名以上の場合、順番にお乗りいただくか、午前の部・午後の部と分けていただくことがございます。<br>
+                    6名以上の場合、数日間に分けて実施させていただくことがございます。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>お問い合わせ・お申込みはこちら</h2>
+    <a href="tel:09090902819" class="button">090-90902819</a>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
