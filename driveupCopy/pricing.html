@@ -1,5 +1,256 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドライブアップ</title>
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>料金について</h1>
 
-{% block content %}
-<h1>料金ページ</h1>
-{% endblock %}
+<div class="pricing-page">
+    <div class="container">
+        <div class="pricing-top">
+            <ul class="pricing-top-list">
+                <li>入会会員制度なし</li>
+                <li>土日祝利用料 無料</li>
+                <li>教習車利用料 無料</li>
+                <li>ガソリン代 無料</li>
+                <li>車両保険料 無料</li>
+                <li>（教習車に限る）</li>
+            </ul>
+        </div>
+        <div class="price-plan">
+            <h2 class="sub-title">教習料金</h2>
+            <div class="first-plan">
+                <h2>初回限定 お試しプラン</h2>
+                <div class="recommend">こんな方にオススメ</div>
+                <p>☆とにかく一度乗ってみたい方</p>
+                <p>☆教習の雰囲気を味わいたい方</p>
+                <div class="plan">2時間 → <span class="price">8,000円</span></div>
+                <p class="original-price">通常価格 9,000円</p>
+                <div class="plan">3時間 → <span class="price">10,000円</span></div>
+                <p class="original-price">通常価格 13,500円</p>
+                <a href="/post/booking/" class="button">お試しプランを申し込む</a>
+                <p class="note">※1時限は50分となります。<br>※全てっ税込価格となります。></p>
+            </div>
+        </div>
+        <div class="pricing-table prit">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>教習時間</th>
+                        <th>料金</th>
+                        <th>1時限あたり</th>
+                    </tr>
+                    <tr>
+                        <td>1時限</td>
+                        <td><strong>5,000円</strong></td>
+                        <td><strong>5,000円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2時限</td>
+                        <td><strong>9,000円</strong></td>
+                        <td><strong>4,500円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>3時限</td>
+                        <td><strong>13,500円</strong></td>
+                        <td><strong>4,500円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>4時限</td>
+                        <td><strong>18,000円</strong></td>
+                        <td><strong>4,500円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>5時限</td>
+                        <td><strong>21,250円</strong></td>
+                        <td><strong>4,250円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>6時限</td>
+                        <td><strong>25,500円</strong></td>
+                        <td><strong>4,250円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>8時限</td>
+                        <td><strong>34,000円</strong></td>
+                        <td><strong>4,250円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10時限</td>
+                        <td><strong>40,000円</strong></td>
+                        <td><strong>4,000円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>12時限</td>
+                        <td><strong>48,000円</strong></td>
+                        <td><strong>4,000円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>15時限</td>
+                        <td><strong>57,000円</strong></td>
+                        <td><strong>3,800円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>20時限</td>
+                        <td><strong>74,000円</strong></td>
+                        <td><strong>3,700円</strong></td>
+                    </tr>
+                    <tr>
+                        <td>30時限</td>
+                        <td><strong>108,000円</strong></td>
+                        <td><strong>3,600円</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <a href="/" class="button">お申し込みはこちら</a>
+
+            <div class="pricing-note">
+                <p class="note">※1時限は50分となります。</p>
+                <p class="note">※全て税込価格となります。</p>
+                <p class="note">※4次元以上の場合は何日かに分けることも可能です。</p>
+                <p class="note">（例： 10時限の場合 → 2時限 x 5日間）</p>
+                <p class="note">※30時限以上のご利用も対応いたします。</p>
+                <p class="note">※利用期限はございません。</p>
+            </div>
+        </div>
+
+        <div class="lesson-text">
+            ご希望の練習内容をご提示ください。<br>
+            もし、なにから始めれば良いか分からないという方は、ご相談いただければ、お客様にあった内容を提案いたします。<br>
+            一度お問い合わせいただくか、お試しプランをお申込みいただき、直接指導員にご相談ください。<br>
+            <button class="button" onclick="openLesson()">教習の実例</button>
+            <div class="lesson-overlay" id="lesson" onclick="closeLesson()">
+                <div class="lesson-card">
+                    <ul>
+                        <li>『車』を知ること</li>
+                        <li>運転スキルの再確認</li>
+                        <li>一般道路、狭い路地の走行練習</li>
+                        <li>希望の目的地までのコース練習(例:職場、買い物、保育園や学校、習い事、病院等)</li>
+                        <li>山岳の走行練習</li>
+                        <li>高速道路の走行練習</li>
+                        <li>自宅や商業施設で駐車の練習</li>
+                        <li>セルフガソリンスタンドでの給油</li>
+                        <li>ドライブスルーの体験</li>
+                        <li>ご家族またはご友人と一緒に練習</li>
+                        <li>苦手箇所の特訓</li>
+                        <li>マイカー(自家用車・社用車)での練習</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="business-price">
+            <h2 class="sub-title">出張料金</h2>
+            <p>
+                出張型ドライビングスクール ドライブアップは、京都府・大阪府・奈良県・滋賀県の関西4府県を中心に出張教習を行っております。<br>
+                京都市・枚方市・奈良市など、事務所近隣エリアの出張料金無料です！<br>ただいま無料エリア拡大中です！
+            </p>
+            <div class="each-area">
+                <div class="area-header" onclick="toggleContent('kyoto')">
+                    京都エリア <span>▼</span>
+                </div>
+                <div class="areas" id="kyoto">
+                    <img src="{% static 'images/others/kyoto.jpg'%}" alt="京都">
+                    <div class="pricing-table">
+                        <div><strong>無料</strong><br>京都市・向日市・長岡京市・大山崎町・久御山町・宇治市・城陽市・八幡市・京田辺市・精華町・木津川市・井手町・宇治田原町・和束町・笠置町・南山城村</div>
+                        <div><strong>3,000円〜</strong><br>亀岡市・南丹市・京丹波町</div>
+                        <div><strong>要相談</strong><br>上記以外の市町村</div>
+                    </div>
+                </div>
+            </div>
+            <div class="each-area">
+                <div class="area-header" onclick="toggleContent('osaka')">
+                    大阪エリア <span>▼</span>
+                </div>
+                <div class="areas" id="kyoto">
+                    <img src="{% static 'images/others/osaka.jpg'%}" alt="大阪">
+                    <div class="pricing-table">
+                        <div><strong>無料</strong><br>枚方市・交野市・寝屋川市・四條畷市・大東市・門真市・守口市・摂津市・高槻市・島本町・茨木市・吹田市</div>
+                        <div><strong>3,000円〜</strong><br>大阪市・東大阪市・八尾市・柏原市・藤井寺市・松原市・羽曳野市・豊中市・池田市・箕面市・豊能市・能勢町</div>
+                        <div><strong>要相談</strong><br>上記以外の市町村</div>
+                    </div>
+                </div>
+            </div>
+            <div class="each-area">
+                <div class="area-header" onclick="toggleContent('nara')">
+                    奈良エリア <span>▼</span>
+                </div>
+                <div class="areas" id="nara">
+                    <img src="{% static 'images/others/nara.jpg'%}" alt="奈良">
+                    <div class="pricing-table">
+                        <div><strong>無料</strong><br>奈良市・生駒市・大和郡山市</div>
+                        <div><strong>3,000円〜</strong><br>天理市・桜井市・宇陀市・曽爾村・山添村・橿原市・明日香村・高取町・大淀町・御所市・大和高田市・葛城市・香芝市・広陵町・田原本町・三宅町・上牧町・王寺町・河合町・川西町・安堵町・斑鳩町・三郷町・平群町</div>
+                        <div><strong>要相談</strong><br>上記以外の市町村</div>
+                    </div>
+                </div>
+            </div>
+            <div class="each-area">
+                <div class="area-header" onclick="toggleContent('shiga')">
+                    滋賀エリア <span>▼</span>
+                </div>
+                <div class="areas" id="shiga">
+                    <img src="{% static 'images/others/shiga.jpg'%}" alt="京都">
+                    <div class="pricing-table">
+                        <!-- <div><strong>無料</strong><br>大津市・草津市・守山市・栗東市・野洲市・近江八幡市・竜王町・湖南市・甲賀市・日野町</div> -->
+                        <div><strong>1,000円〜</strong><br>大津市・草津市・守山市・栗東市・野洲市・近江八幡市・竜王町・湖南市・甲賀市・日野町</div>
+                        <div><strong>要相談</strong><br>上記以外の市町村</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="note">
+                    ※出張料金が発生するエリアへ出張希望の方は、1日3時限以上のご利用をお願いいたします。<br>
+                    ※『要相談エリア』へ出張希望の方はお気軽にお問い合わせください。
+                </p>
+                <a href="/" class="button">お申し込みはこちら</a>
+            </div>
+                
+        </div>
+
+        
+        
+    </div>
+    <div class="pay-others">
+        <h2 class="sub-title">お支払い方法・その他</h2>
+        <div class="pay-text">
+            <h3>お支払いに関して</h3>
+            <p>
+                教習終了後に各プランご利用時限数の金額を現金のみでお支払いいただきます。<br>
+                クレジットカード等での決済はいたしておりませんのでご了承願います。<br>
+                (※数日間にわたってご利用いただくお客様に関しましては、1日目の教習終了後にご利用時限数分のお支払いをお願いしております。)
+            </p>
+            <h3>早朝・夜間料金に関して</h3>
+            <p>
+                営業時間は朝9:00～夕方18:00となります。<br>
+                営業時間外での教習をご希望の方は1時限あたり別途500円の早朝及び夜間料金が発生いたします。<br>
+                出張エリアによっては、訪問時間が限られますので一度お問い合わせください。
+            </p>
+            <h3>高速道路(有料道路)教習に関して</h3>
+            <p>高速道路(有料道路)の走行にて発生する料金に関しましては、お客様負担とさせていただいております。</p>
+            <h3>マイカー(自家用車・社用車)ご利用に関して</h3>
+            <p>
+                マイカーをご利用の際の追加料金はございません。<br>
+                マイカーのガソリン代やレンタカーをご利用される場合のレンタル代はお客様負担となります。<br>
+                また、指導員は教習車にて移動しておりますのでマイカー練習の際は教習車の駐車スペースの確保(マイカーとの入れ替えや近隣のコインパーキング料金のご負担等)をお願いしております。<br>
+                詳細ご不明な点はお気軽にお申し付けください。
+            </p>
+            <h3>キャンセル・日程変更に関して</h3>
+            <p>
+                原則として受講前日の18:00までにご連絡いただけましたら、無料で対応させていただいております。<br>
+                受講前日18:00までにご連絡・・・無料<br>
+                受講前日18:00以降にご連絡・・・全額請求
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
